@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <style>
+      .xyz {
+        font-weight: bold;
+        font-size: x-large;
+      }
+      .white_lable
+      {
+       color: white;
+      }
+      body
+      {
+        text-align:center;
+        align:center;
+        background-image: url({{url_for('static', filename='builtin/6.jpg')}})
+      }
+      input[type=text] {
+      width: 50%;
+      font-size: larger;
+      padding: 12px 20px;
+      margin: 1px 0;
+      box-sizing: border-box;
+      }
+    </style>
+  </head>
+<body>
+<h1 style = "text-align: center; color: white; font-size: xx-large;">Wine Quality Prediction</h1>
+<form action="/submit" method='post'>
+    <label class="xyz white_lable">Fixed Acidity:</label><br>
+    <input type="text" id="txtfixed acidity"  name="Fixed_Acidity"><br><br>
+    <label class="xyz white_lable" >Volatile Acidity:</label><br>
+    <input type="text" id="txtvolatile acidity" name="Volatile_Acidity"><br>
+    <label class="xyz white_lable">Citric Acid:</label><br>
+    <input type="text" id="citric acid" name="Citric_Acid"><br><br>
+    <label class="xyz white_lable">Residual Sugar:</label><br>
+    <input type="text" id="residual sugar" name="Residual_Sugar"><br><br>
+    <label class="xyz white_lable" >Chlorides:</label><br>
+    <input type="text" id="chlorides" name="Chlorides"><br><br>
+    <label class="xyz white_lable" >Free Sulfur Dioxide:</label><br>
+    <input type="text" id="free sulfur dioxide" name="Free_Sulfur_Dioxide"><br><br>
+    <label class="xyz white_lable">Total Sulfur Dioxide	:</label><br>
+    <input type="text" id="total sulfur dioxide	" name="Total_Sulfur_Dioxide"><br><br>
+    <label class="xyz white_lable">Density:</label><br>
+    <input type="text" id="density" name="Density"><br><br>
+    <label class="xyz white_lable">PH:</label><br>
+    <input type="text" id="pH" name="PH"><br><br>
+    <label class="xyz white_lable">Sulphates:</label><br>
+    <input type="text" id="sulphates" name="Sulphates"><br><br>
+    <label class="xyz white_lable" >Alcohol:</label><br>
+    <input type="text" id="alcohol" name="Alcohol"><br><br>
+   
+    <h1>{{result}} </h1>
+    
+    <input type="submit" value="Submit">
+  </form> 
+</body>
+</html>
